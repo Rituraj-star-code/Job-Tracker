@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement and Job Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Placement & Job Application Tracker</h1>
+        
+        <!-- Job Data Form -->
+        <form id="jobForm">
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <input type="text" id="roleProfile" placeholder="Role Profile (e.g. SDE)" required>
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interviewing">Interviewing</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <button type="submit">Add Application</button>
+        </form>
+
+        <!-- Search Feature Box -->
+        <div class="filter-container">
+            <input type="text" id="searchBar" placeholder="Search saved companies...">
+        </div>
+
+        <!-- Render List Target -->
+        <h2>Your Job Track List</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Role / Profile</th>
+                        <th>Application Status</th>
+                        <th>Action Buttons</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationTableBody">
+                    <!-- JavaScript dynamically adds rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
